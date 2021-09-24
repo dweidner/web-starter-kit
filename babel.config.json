@@ -1,0 +1,27 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": "3.8",
+        "loose": true
+      }
+    ]
+  ],
+  "env": {
+    "modern": {
+      "browserslistEnv": "modern",
+      "targets": {
+        "esmodules": true
+      }
+    },
+    "legacy": {
+      "browserslistEnv": "legacy",
+      "targets": {
+        "esmodules": false
+      }
+    }
+  }
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Web Starter Kit</title>
+
+  <!-- Configure Content-Security-Policy to work with the dynamic import polyfill -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' blob:"> -->
+
+  <link rel="preload" as="script" crossorigin="anonymous" href="vendor.mjs">
+  <link rel="preload" as="script" crossorigin="anonymous" href="main.mjs">
+
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <main role="main">
+    <button class="c-button" data-component="confetti-button">
+      Confetti!
+    </button>
+  </main>
+
+  <!-- Polyfill for `nomodule` in Safari 10.1 -->
+  <script type="module">
+    !function(e,t,n){!("noModule"in(t=e.createElement("script")))&&"onbeforeload"in t&&(n=!1,e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove())}(document)
+  </script>
+
+  <!-- Modern Browsers: Chrome >=60, Firefox >=54, Edge >=15, Safari >=10.1 -->
+  <script src="/scripts/main.mjs" type="module"></script>
+
+  <!-- Legacy Browsers: Edge <15, IE 11, Safari <10.1 -->
+  <script src="/scripts/main.js" nomodule async defer></script>
+</body>
+</html>

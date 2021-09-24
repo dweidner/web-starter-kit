@@ -1,0 +1,32 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:compat/recommended",
+    "plugin:jsdoc/recommended",
+    "plugin:promise/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "rules": {
+    "import/extensions": ["error", "always", {
+      "ignorePackages": true
+    }],
+    "jsdoc/require-returns-description": ["off"],
+    "jsdoc/tag-lines": ["off"],
+    "unicorn/prefer-node-protocol": ["off"],
+    "object-curly-spacing": ["error", "never"]
+  },
+  "settings": {
+    "jsdoc": {
+      "mode": "typescript"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "name": "@dweidner/web-starter-kit",
+  "version": "0.1.0",
+  "description": "An opinionated starter template for building websites",
+  "browser": "src/js/main.js",
+  "repository": "dweidner/web-starter-kit",
+  "author": "Daniel Weidner <hallo@danielweidner.de>",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "babel",
+    "eslint",
+    "postcss",
+    "rollup",
+    "stylelint"
+  ],
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "browserslist": {
+    "modern": [
+      "last 2 Chrome versions",
+      "not Chrome < 60",
+      "last 2 Safari versions",
+      "not Safari < 10.1",
+      "last 2 iOS versions",
+      "not iOS < 10.3",
+      "last 2 Firefox versions",
+      "not Firefox < 54",
+      "last 2 Edge versions",
+      "not Edge < 15"
+    ],
+    "legacy": [
+      "> 1%",
+      "last 2 versions",
+      "Firefox ESR",
+      "not dead"
+    ]
+  },
+  "scripts": {
+    "start": "npm-s clean watch",
+    "clean": "rimraf dist",
+    "build": "run-s --silent --print-label clean build:*",
+    "build:scripts": "rollup -c",
+    "build:styles": "postcss 'src/styles/*.css' --dir dist --base src --map",
+    "watch": "run-p --silent --print-label --continue-on-error watch:*",
+    "watch:scripts": "rollup -c --watch --no-watch.clearScreen",
+    "watch:styles": "postcss 'src/styles/*.css' --dir dist --base src --watch --verbose",
+    "lint": "run-s --silent --print-label lint:*",
+    "lint:scripts": "eslint .",
+    "lint:styles": "stylelint 'src/styles/**/*.css'"
+  },
+  "dependencies": {
+    "core-js": "^3.18.0",
+    "dynamic-import-polyfill": "^0.1.1",
+    "postcss-hash": "^3.0.0",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "whatwg-fetch": "^3.6.2",
+    "wicked-elements": "^3.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.7",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "@dweidner/stylelint-config": "^3.0.0",
+    "@dweidner/stylelint-config-property-order": "^1.2.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "cssnano": "^5.0.8",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-compat": "^3.13.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsdoc": "^36.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-unicorn": "^36.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.7",
+    "postcss-cli": "^8.3.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.57.0",
+    "rollup-plugin-output-manifest": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "stylelint": "^13.13.1"
+  }
+}
