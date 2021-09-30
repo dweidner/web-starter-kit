@@ -1,7 +1,6 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
-import outputManifest from 'rollup-plugin-output-manifest';
 
 import {terser} from 'rollup-plugin-terser';
 
@@ -28,13 +27,6 @@ const configurePlugins = (environment) => ([
     babelHelpers: 'bundled',
     envName: environment,
     exclude: /node_modules/,
-  }),
-  outputManifest({
-    fileName: 'asset-manifest.json',
-    isMerge: true,
-    filter: ({name}) => (
-      !name?.endsWith('.map')
-    ),
   }),
 ]);
 
@@ -72,8 +64,8 @@ const modernConfig = {
     dir: 'dist',
     format: 'esm',
     sourcemap: isWatchMode ? 'inline' : true,
-    entryFileNames: isProduction ? 'scripts/[name].[hash].mjs' : 'scripts/[name].mjs',
-    chunkFileNames: isProduction ? 'scripts/[name].[hash].mjs' : 'scripts/[name].mjs',
+    entryFileNames: 'scripts/[name].mjs',
+    chunkFileNames: 'scripts/[name].mjs',
     manualChunks: {
       vendor: ['wicked-elements'],
     },
@@ -104,8 +96,8 @@ const legacyConfig = {
     dir: 'dist',
     format: 'iife',
     sourcemap: isWatchMode ? 'inline' : true,
-    entryFileNames: isProduction ? 'scripts/[name].[hash].js' : 'scripts/[name].js',
-    chunkFileNames: isProduction ? 'scripts/[name].[hash].js' : 'scripts/[name].js',
+    entryFileNames: 'scripts/[name].js',
+    chunkFileNames: 'scripts/[name].js',
     inlineDynamicImports: true,
     plugins: [
       isProduction && terser({
