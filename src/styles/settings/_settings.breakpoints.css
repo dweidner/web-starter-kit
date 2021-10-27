@@ -1,0 +1,37 @@
+/* -----------------------------------------------------------------------
+ * #SETTINGS:BREAKPOINTS
+ * ----------------------------------------------------------------------- */
+
+/**
+ * Media Queries
+ *
+ * A set of custom media queries that can be used to adapt the layout to
+ * different screen sizes. Avoid using breakpoints for popular device
+ * resolutions. Let content determine the breakpoints instead.
+ *
+ * You should use EM units to ensure that the media queries work consistent
+ * across all browsers. EM and REM units should not be affected by changes in
+ * font-size since they are based on the user preference (which is typically
+ * 16px by default).
+ *
+ * @see {@link https://zellwk.com/blog/media-query-units/ PX, EM or REM Media Queries?}
+ *
+ * @example css
+ *   @media (--md-up) {
+ *     .u-show\@md {
+ *       display: revert;
+ *     }
+ *   }
+ */
+
+@custom-media --xs-only  (max-width: 23.9375em);
+@custom-media --sm-up    (min-width: 24em);
+@custom-media --sm-down  (max-width: 47.9375em);
+@custom-media --sm-only  (min-width: 24em) and (max-width: 47.9375em);
+@custom-media --md-up    (min-width: 48em);
+@custom-media --md-down  (max-width: 63.9375em);
+@custom-media --md-only  (min-width: 48em) and (max-width: 63.9375em);
+@custom-media --lg-up    (min-width: 64em);
+@custom-media --lg-down  (max-width: 79.9375em);
+@custom-media --lg-only  (min-width: 80em) and (max-width: 104.9375em);
+@custom-media --xl-up    (min-width: 105em);

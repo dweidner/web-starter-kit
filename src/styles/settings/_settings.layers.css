@@ -1,0 +1,22 @@
+/* -----------------------------------------------------------------------
+ * #SETTINGS:LAYERS
+ * ----------------------------------------------------------------------- */
+
+/**
+ * System for handling z-index
+ *
+ * Maintain the z-index values used throughout the site in one place. Remember
+ * though that the element with the largest z-index is not necessarily on top of
+ * all other elements. The stacking context of an element has to be taken into
+ * account.
+ *
+ * @see {@link https://www.joshwcomeau.com/css/stacking-contexts/ What the heck, z-index??}
+ */
+
+:root {
+  --layer-modal:      50;
+  --layer-overlay:    40;
+  --layer-dropdown:   30;
+  --layer-header:     20;
+  --layer-footer:     10;
+}

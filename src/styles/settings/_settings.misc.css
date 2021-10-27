@@ -1,0 +1,21 @@
+/* -----------------------------------------------------------------------
+ * #SETTINGS:MISC
+ * ----------------------------------------------------------------------- */
+
+/**
+ * Miscellaneous Settings
+ *
+ * A collection of various other project wide properties which are currently not
+ * spread into separate files.
+ */
+
+:root {
+
+  /* Border Radiuses
+   * --------------------------------------------------------------------- */
+
+  --radius-sm:         4px;
+  --radius-md:         8px;
+  --radius-lg:        12px;
+  --radius-full:    9999px;
+}

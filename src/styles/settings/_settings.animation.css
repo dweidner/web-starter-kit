@@ -1,0 +1,45 @@
+/* -----------------------------------------------------------------------
+ * #SETTINGS:ANIMATION
+ * ----------------------------------------------------------------------- */
+
+/**
+ * Animation Settings
+ *
+ * A custom set of easing functions that can be used to enforce consistency
+ * across transitions and animations.
+ *
+ * Some rules of thumbs when to apply which easing function:
+ * - Standard Curve (ease-in-out):   Objects moving from A to B. Growing/shrinking.
+ * - Acceleration Curve (ease-in):   Objects leaving the screen.
+ * - Deceleration Curve (ease-out):  Objects entering the screen.
+ *
+ * Some suggestions for animation durations on mobile:
+ * - Full-Screen Transitions:        375ms
+ * - Elements entering screen:       225ms
+ * - Elements leaving screen:        195ms
+ *
+ * Durations should depend upon the size of the screen:
+ * - Wearables:    30% shorter than on mobile
+ * - Tablets:      30% longer than on mobile
+ * - Desktops:     10% to 30% faster than on mobile
+ *
+ * @see {@link https://material.io/archive/guidelines/motion/duration-easing.html Duration & Easing}
+ * @see {@link https://cubic-bezier.com Cubic Bezier}
+ */
+
+:root {
+
+  /* Easing Functions
+   * --------------------------------------------------------------------- */
+
+  --easing-standard:        cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-accelerate:      cubic-bezier(0.4, 0, 1, 1);
+  --easing-decelerate:      cubic-bezier(0, 0, 0.2, 1);
+
+  /* Animation Durations
+   * --------------------------------------------------------------------- */
+
+  --duration-snappy:        195ms;
+  --duration-standard:      225ms;
+  --duration-noticeable:    375ms;
+}

@@ -1,0 +1,31 @@
+/* -----------------------------------------------------------------------
+ * #SETTINGS:ELEVATION
+ * ----------------------------------------------------------------------- */
+
+/**
+ * Elevation System
+ *
+ * A collection of layered box shadows that can be used to introduce the
+ * illusion of depth on the page. Use different elevation levels as a tool to
+ * direct a users attention or to make a website feel more tactile and
+ * life-like.
+ *
+ * @see {@link https://material.io/design/environment/elevation.html Elevation}
+ * @see {@link https://www.joshwcomeau.com/css/designing-shadows/ Designing Beautiful Shadows}
+ * @see {@link https://shadows.brumm.af/ Smooth Shadow}
+ */
+
+:root {
+
+  /* Shadow Colors
+   * --------------------------------------------------------------------- */
+
+  --shadow-color:      0 0% 62%;
+
+  /* Box Shadows
+   * --------------------------------------------------------------------- */
+
+  --elevation-1:       1px 1px 3px -1px hsl(var(--shadow-color) / 0.666);
+  --elevation-2:       1px 1px 3px -1px hsl(var(--shadow-color) / 0.333), 2px 2px 4px -2px hsl(var(--shadow-color) / 0.333), 4px 4px 8px -4px hsl(var(--shadow-color) / 0.333);
+  --elevation-3:       1px 1px 3px -1px hsl(var(--shadow-color) / 0.2), 2px 2px 4px -2px hsl(var(--shadow-color) / 0.2), 4px 4px 8px -4px hsl(var(--shadow-color) / 0.2), 8px 8px 16px -8px hsl(var(--shadow-color) / 0.2), 16px 16px 32px -16px hsl(var(--shadow-color) / 0.2);
+}

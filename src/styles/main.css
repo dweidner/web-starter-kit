@@ -1,3 +1,60 @@
-* {
-  box-sizing: content-box;
-}
+/**
+ * TABLE OF CONTENTS
+ *
+ * Settings ---------------- Global variables
+ *   Breakpoints ........... Media queries
+ *   Typography ............ Type scale
+ *   Colors ................ Color palette
+ *   Layout ................ Spacing and sizing scale
+ *   Animation ............. Consistency accross motions
+ *   Elevation ............. Illusion of depth
+ *   Layers ................ Consistent layering
+ *   Misc .................. Miscellaneous settings
+ *
+ * Generic ----------------- Ground-zero styles
+ *   Fonts ................. Custom web fonts
+ *   Reboot ................ Opinionated reset of browser styles
+ *
+ * Objects ----------------- Cosmetic-free design patterns
+ *   Container ............. Limit an elements width.
+ *   Stack ................. Add spacing between siblings.
+ *   Icon .................. Properly align pictograms with surroundig text.
+ *
+ * Components -------------- Styled UI components
+ *   Header ................ Header of a website.
+ *   Footer ................ Information repeated at the end of each page.
+ *
+ * Scopes ------------------ Styled UI sections
+ *   Rich Text ............. Sane typographic defaults for text sections.
+ *
+ * Vendors ----------------- 3rd party styles
+ *   Google Maps .......... Split and animate (text) elements.
+ *
+ * Utilities --------------- Helpers and overwrites
+ *   Accessibility ......... Utilities for screen-readers.
+ *   Animation ............. Animate elements.
+ *   Color ................. Customize the text color of elements.
+ *   Text .................. Utilities to change the appearance of text.
+ *   Spacing ............... Increase the vertical spacing between elements.
+ *   Misc .................. Miscellaneous utilities.
+ */
+
+
+/* Settings
+ * ----------------------------------------------------------------------- */
+
+@import "settings/_settings.breakpoints.css";
+@import "settings/_settings.typography.css";
+@import "settings/_settings.colors.css";
+@import "settings/_settings.layout.css";
+@import "settings/_settings.animation.css";
+@import "settings/_settings.elevation.css";
+@import "settings/_settings.layers.css";
+@import "settings/_settings.misc.css";
+
+
+/* Generic
+ * ----------------------------------------------------------------------- */
+
+@import "generic/_generic.fonts.css";
+@import "generic/_generic.reboot.css";
