@@ -1,66 +1,92 @@
+const path = require('path');
+
+const autoprefixer = require('autoprefixer');
+const caniuse = require('caniuse-api');
 const cssnano = require('cssnano');
 
-const postcssPresetEnv = require('postcss-preset-env');
 const postcssImport = require('postcss-import');
-const postcssHash = require('postcss-hash');
+const postcssUrl = require('postcss-url');
+const postcssCustomMedia = require('postcss-custom-media');
+const postcssCustomProperties = require('postcss-custom-properties');
+const postcssNesting = require('postcss-nesting');
+const postcssCalc = require('postcss-calc');
+const postcssGap = require('postcss-gap-properties');
+const postcssInset = require('postcss-inset');
+const postcssFunctionalColorNotation = require('postcss-color-functional-notation');
 
 const {browserslist} = require('./package.json');
 
 /**
- * Determine whether to generate a production build.
+ * Determine whether a feature is supported in a given target environment.
+ *
+ * @param {string} feature The feature to test for.
+ * @param {string} env The name of the target environment.
+ * @returns {boolean}
  */
-const isProduction = (process.env.NODE_ENV === 'production');
+const isSupported = (feature, env = 'legacy') => (
+  caniuse.isSupported(feature, browserslist[env])
+);
 
 /**
- * Configure the PostCSS plugins for a specific target environment.
+ * Configure PostCSS plugins that transform modern CSS features into something
+ * that all target browsers can understand.
  *
- * Note: Fetches the browser list for legacy browsers from the `package.json`
- * as PostCSS does not support custom environment names as input.
+ * Note: Not using postcss-preset-env here to be more specific about the
+ * included transforms.
  *
+ * @param {string} [env='legacy'] The name of the target environment.
  * @returns {import('postcss').Transformer[]}
  */
-const configurePlugins = () => ([
+const configurePlugins = (env = 'legacy') => ([
   postcssImport(),
-  postcssPresetEnv({
-    browsers: browserslist.legacy,
-    stage: 3,
-    features: {
-      'custom-media-queries': true,
-      'nesting-rules': true,
-      'not-pseudo-class': true,
-      'matches-pseudo-class': true,
-      'overflow-property': true,
-      'overflow-wrap': true,
-      'system-ui-font-family': true,
-      'custom-properties': false,
-    },
+  postcssUrl([{
+    url: 'inline',
+    filter: /\.(svg|png)$/,
+    basePath: path.resolve('src/images'),
+    maxSize: 2,
+  }]),
+  !isSupported('css-variables', env) && postcssCustomProperties({
+    preserve: false,
+    importFrom: [
+      'src/styles/settings/_settings.breakpoints.css',
+      'src/styles/settings/_settings.typography.css',
+      'src/styles/settings/_settings.colors.css',
+      'src/styles/settings/_settings.layout.css',
+      'src/styles/settings/_settings.layers.css',
+      'src/styles/settings/_settings.animation.css',
+      'src/styles/settings/_settings.elevation.css',
+      'src/styles/settings/_settings.misc.css',
+    ],
   }),
-]);
-
-/**
- * Configure the CSS minifiers to use for production environments.
- *
- * @returns {import('postcss').Transformer[]}
- */
-const configureMinifiers = () => ([
-  cssnano({
-    preset: 'default',
-  }),
-  postcssHash({
-    manifest: './dist/asset-manifest.json',
-    algorithm: 'sha256',
+  postcssCustomMedia(),
+  postcssNesting(),
+  postcssCalc(),
+  postcssGap(),
+  postcssInset(),
+  postcssFunctionalColorNotation(),
+  autoprefixer({
+    env,
   }),
 ]);
 
 /**
  * Context dependent PostCSS configuration.
+ *
+ * @param {object} context
+ * @returns {object}
  */
-const postcssConfig = (context) => ({
-  map: context.options.map,
-  plugins: [
-    ...configurePlugins(),
-    ...isProduction ? configureMinifiers() : [],
-  ],
-});
+const postcssConfig = ({env, options}) => {
+  const isProduction = (env === 'production');
+
+  const config = {
+    map: options.map,
+    plugins: [
+      ...configurePlugins(),
+      ...isProduction ? [cssnano()] : [],
+    ],
+  };
+
+  return config;
+};
 
 module.exports = postcssConfig;
