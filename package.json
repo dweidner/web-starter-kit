@@ -51,7 +51,7 @@
     "lint:styles": "stylelint 'src/styles/**/*.css'"
   },
   "dependencies": {
-    "core-js": "^3.18.0",
+    "core-js": "^3.18.1",
     "dynamic-import-polyfill": "^0.1.1",
     "postcss-hash": "^3.0.0",
     "postcss-import": "^14.0.2",
