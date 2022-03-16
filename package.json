@@ -86,7 +86,7 @@
     "postcss": "^8.4.11",
     "postcss-calc": "^8.0.0",
     "postcss-cli": "^9.1.0",
-    "postcss-color-functional-notation": "^4.2.0",
+    "postcss-color-functional-notation": "^4.2.2",
     "postcss-custom-media": "^8.0.0",
     "postcss-custom-properties": "^12.1.4",
     "postcss-gap-properties": "^3.0.1",
