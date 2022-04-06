@@ -28,18 +28,17 @@
  */
 
 :root {
-
   /* Easing Functions
    * --------------------------------------------------------------------- */
 
-  --easing-standard:        cubic-bezier(0.4, 0, 0.2, 1);
-  --easing-accelerate:      cubic-bezier(0.4, 0, 1, 1);
-  --easing-decelerate:      cubic-bezier(0, 0, 0.2, 1);
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  --easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
 
   /* Animation Durations
    * --------------------------------------------------------------------- */
 
-  --duration-snappy:        195ms;
-  --duration-standard:      225ms;
-  --duration-noticeable:    375ms;
+  --duration-snappy: 195ms;
+  --duration-standard: 225ms;
+  --duration-noticeable: 375ms;
 }

@@ -16,16 +16,23 @@
  */
 
 :root {
-
   /* Shadow Colors
    * --------------------------------------------------------------------- */
 
-  --shadow-color:      0 0% 62%;
+  --shadow-color: 0 0% 62%;
 
   /* Box Shadows
    * --------------------------------------------------------------------- */
 
-  --elevation-1:       1px 1px 3px -1px hsl(var(--shadow-color) / 0.666);
-  --elevation-2:       1px 1px 3px -1px hsl(var(--shadow-color) / 0.333), 2px 2px 4px -2px hsl(var(--shadow-color) / 0.333), 4px 4px 8px -4px hsl(var(--shadow-color) / 0.333);
-  --elevation-3:       1px 1px 3px -1px hsl(var(--shadow-color) / 0.2), 2px 2px 4px -2px hsl(var(--shadow-color) / 0.2), 4px 4px 8px -4px hsl(var(--shadow-color) / 0.2), 8px 8px 16px -8px hsl(var(--shadow-color) / 0.2), 16px 16px 32px -16px hsl(var(--shadow-color) / 0.2);
+  --elevation-1: 1px 1px 3px -1px hsl(var(--shadow-color) / 66.6%);
+  --elevation-2:
+    1px 1px 3px -1px hsl(var(--shadow-color) / 33.3%),
+    2px 2px 4px -2px hsl(var(--shadow-color) / 33.3%),
+    4px 4px 8px -4px hsl(var(--shadow-color) / 33.3%);
+  --elevation-3:
+    1px 1px 3px -1px hsl(var(--shadow-color) / 20%),
+    2px 2px 4px -2px hsl(var(--shadow-color) / 20%),
+    4px 4px 8px -4px hsl(var(--shadow-color) / 20%),
+    8px 8px 16px -8px hsl(var(--shadow-color) / 20%),
+    16px 16px 32px -16px hsl(var(--shadow-color) / 20%);
 }

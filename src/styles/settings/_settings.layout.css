@@ -12,12 +12,12 @@
  */
 
 :root {
-  --size-0:    0;
-  --size-1:    0.25rem;
-  --size-2:    0.5rem;
-  --size-4:    1rem;
-  --size-8:    2rem;
-  --size-16:   4rem;
-  --size-32:   8rem;
-  --size-64:   16rem;
+  --size-0: 0;
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-4: 1rem;
+  --size-8: 2rem;
+  --size-16: 4rem;
+  --size-32: 8rem;
+  --size-64: 16rem;
 }

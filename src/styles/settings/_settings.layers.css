@@ -14,9 +14,9 @@
  */
 
 :root {
-  --layer-modal:      50;
-  --layer-overlay:    40;
-  --layer-dropdown:   30;
-  --layer-header:     20;
-  --layer-footer:     10;
+  --layer-modal: 50;
+  --layer-overlay: 40;
+  --layer-dropdown: 30;
+  --layer-header: 20;
+  --layer-footer: 10;
 }

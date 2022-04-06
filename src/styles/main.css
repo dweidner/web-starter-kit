@@ -39,7 +39,6 @@
  *   Misc .................. Miscellaneous utilities.
  */
 
-
 /* Settings
  * ----------------------------------------------------------------------- */
 
@@ -51,7 +50,6 @@
 @import "settings/_settings.elevation.css";
 @import "settings/_settings.layers.css";
 @import "settings/_settings.misc.css";
-
 
 /* Generic
  * ----------------------------------------------------------------------- */

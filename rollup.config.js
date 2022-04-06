@@ -38,7 +38,6 @@ const configurePlugins = (environment) => ([
  *
  * @see {@link https://rollupjs.org/guide/en/#renderdynamicimport}
  * @see {@link https://github.com/GoogleChromeLabs/dynamic-import-polyfill}
- *
  * @param {string} name The name of the import function.
  * @returns {import('rollup').Plugin}
  */
