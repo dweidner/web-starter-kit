@@ -4,7 +4,7 @@
   "description": "An opinionated starter template for building websites",
   "repository": "dweidner/web-starter-kit",
   "author": "Daniel Weidner <hallo@danielweidner.de>",
-  "license": "MIT",
+  "license": "ISC",
   "browser": "dist/scripts/main.js",
   "module": "dist/scripts/main.mjs",
   "style": " dist/styles/main.css",
