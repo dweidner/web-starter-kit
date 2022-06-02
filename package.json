@@ -73,7 +73,7 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.10",
-    "eslint": "^8.15.0",
+    "eslint": "^8.16.0",
     "eslint-plugin-compat": "^4.0.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsdoc": "^39.2.9",
