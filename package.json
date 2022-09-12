@@ -1,11 +1,10 @@
 {
   "name": "@dweidner/web-starter-kit",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "An opinionated starter template for building websites",
   "repository": "dweidner/web-starter-kit",
   "author": "Daniel Weidner <hallo@danielweidner.de>",
   "license": "ISC",
-  "browser": "dist/scripts/main.js",
   "module": "dist/scripts/main.mjs",
   "style": " dist/styles/main.css",
   "private": true,
@@ -24,26 +23,11 @@
     "src/scripts/**/*.js",
     "src/styles/**/*.css"
   ],
-  "browserslist": {
-    "modern": [
-      "last 2 Chrome versions",
-      "not Chrome < 60",
-      "last 2 Safari versions",
-      "not Safari < 10.1",
-      "last 2 iOS versions",
-      "not iOS < 10.3",
-      "last 2 Firefox versions",
-      "not Firefox < 54",
-      "last 2 Edge versions",
-      "not Edge < 15"
-    ],
-    "legacy": [
-      "> 1%",
-      "last 2 versions",
-      "Firefox ESR",
-      "not dead"
-    ]
-  },
+  "browserslist": [
+    "defaults",
+    "supports css-variables",
+    "supports es6-module"
+  ],
   "scripts": {
     "start": "run-s clean watch",
     "clean": "rimraf dist",
@@ -84,7 +68,6 @@
     "postcss-cli": "^10.0.0",
     "postcss-color-functional-notation": "^4.2.4",
     "postcss-custom-media": "^8.0.2",
-    "postcss-custom-properties": "^12.1.8",
     "postcss-gap-properties": "^3.0.5",
     "postcss-import": "^15.0.0",
     "postcss-inset": "^1.0.0",

@@ -15,22 +15,6 @@ const isProduction = (process.env.NODE_ENV === 'production');
 const isWatchMode = (typeof process.env.ROLLUP_WATCH !== 'undefined');
 
 /**
- * Configure the rollup plugins for a specific target environment.
- *
- * @param {string} environment The name of the target environment.
- * @returns {import('rollup').Plugin[]}
- */
-const configurePlugins = (environment) => ([
-  nodeResolve(),
-  commonjs(),
-  babel({
-    babelHelpers: 'bundled',
-    envName: environment,
-    exclude: /node_modules/,
-  }),
-]);
-
-/**
  * A custom output plugin that replaces all dynamic imports with a custom
  * handler. Usefull for generating code that use a dynamic import polyfill.
  *
@@ -49,16 +33,18 @@ const dynamicImportFunction = (name = '__import__') => ({
   }),
 });
 
-/**
- * Bundle configuration for modern browsers supporting ES module.
- *
- * @type {import('rollup').RollupOptions}
- */
-const modernConfig = {
+export default {
   input: {
-    main: 'src/scripts/main.modern.js',
+    main: 'src/scripts/main.js',
   },
-  plugins: configurePlugins('modern'),
+  plugins: [
+    nodeResolve(),
+    commonjs(),
+    babel({
+      babelHelpers: 'bundled',
+      exclude: /node_modules/,
+    }),
+  ],
   output: {
     dir: 'dist',
     format: 'esm',
@@ -80,43 +66,3 @@ const modernConfig = {
     ],
   },
 };
-
-/**
- * Bundle configuration for legacy browsers not supporting ES modules.
- *
- * @type {import('rollup').RollupOptions}
- */
-const legacyConfig = {
-  input: {
-    main: 'src/scripts/main.legacy.js',
-  },
-  plugins: configurePlugins('legacy'),
-  output: {
-    dir: 'dist',
-    format: 'iife',
-    sourcemap: isWatchMode ? 'inline' : true,
-    entryFileNames: 'scripts/[name].js',
-    chunkFileNames: 'scripts/[name].js',
-    inlineDynamicImports: true,
-    plugins: [
-      isProduction && terser({
-        ecma: 5,
-        module: false,
-        safari10: true,
-        compress: {
-          passes: 2,
-        },
-      }),
-    ],
-  },
-};
-
-/**
- * Rollup configuration containing multiple build outputs.
- */
-const rollupConfig = [
-  modernConfig,
-  legacyConfig,
-];
-
-export default rollupConfig;
