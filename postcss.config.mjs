@@ -1,31 +1,19 @@
-const path = require('path');
+import {isSupported} from 'caniuse-api';
+import {resolve} from 'path';
+import {browserslist} from './package.json';
 
-const autoprefixer = require('autoprefixer');
-const caniuse = require('caniuse-api');
-const cssnano = require('cssnano');
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
 
-const postcssImport = require('postcss-import');
-const postcssUrl = require('postcss-url');
-const postcssCustomMedia = require('postcss-custom-media');
-const postcssCustomProperties = require('postcss-custom-properties');
-const postcssNesting = require('postcss-nesting');
-const postcssCalc = require('postcss-calc');
-const postcssGap = require('postcss-gap-properties');
-const postcssInset = require('postcss-inset');
-const postcssFunctionalColorNotation = require('postcss-color-functional-notation');
-
-const {browserslist} = require('./package.json');
-
-/**
- * Determine whether a feature is supported in a given target environment.
- *
- * @param {string} feature The feature to test for.
- * @param {string} env The name of the target environment.
- * @returns {boolean}
- */
-const isSupported = (feature, env = 'legacy') => (
-  caniuse.isSupported(feature, browserslist[env])
-);
+import postcssImport from 'postcss-import';
+import postcssUrl from 'postcss-url';
+import postcssCustomMedia from 'postcss-custom-media';
+import postcssCustomProperties from 'postcss-custom-properties';
+import postcssNesting from 'postcss-nesting';
+import postcssCalc from 'postcss-calc';
+import postcssGap from 'postcss-gap-properties';
+import postcssInset from 'postcss-inset';
+import postcssFunctionalColorNotation from 'postcss-color-functional-notation';
 
 /**
  * Configure PostCSS plugins that transform modern CSS features into something
@@ -42,10 +30,10 @@ const configurePlugins = (env = 'legacy') => ([
   postcssUrl([{
     url: 'inline',
     filter: /\.(svg|png)$/,
-    basePath: path.resolve('src/images'),
+    basePath: resolve('src/images'),
     maxSize: 2,
   }]),
-  !isSupported('css-variables', env) && postcssCustomProperties({
+  !isSupported('css-variables', browserslist[env]) && postcssCustomProperties({
     preserve: false,
     importFrom: [
       'src/styles/settings/_settings.breakpoints.css',
@@ -89,4 +77,4 @@ const postcssConfig = ({env, options}) => {
   return config;
 };
 
-module.exports = postcssConfig;
+export default postcssConfig;
