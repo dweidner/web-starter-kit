@@ -58,7 +58,7 @@
     "lint:styles": "stylelint 'src/styles/**/*.css'"
   },
   "dependencies": {
-    "core-js": "^3.22.8",
+    "core-js": "^3.25.0",
     "dynamic-import-polyfill": "^0.1.1",
     "whatwg-fetch": "^3.6.2",
     "wicked-elements": "^3.1.2"
@@ -67,7 +67,7 @@
     "@babel/core": "^7.18.2",
     "@babel/eslint-parser": "^7.18.2",
     "@babel/plugin-transform-runtime": "^7.18.2",
-    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-env": "^7.19.0",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
