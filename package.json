@@ -58,7 +58,7 @@
     "lint:styles": "stylelint 'src/styles/**/*.css'"
   },
   "dependencies": {
-    "core-js": "^3.25.0",
+    "core-js": "^3.25.1",
     "dynamic-import-polyfill": "^0.1.1",
     "whatwg-fetch": "^3.6.2",
     "wicked-elements": "^3.1.2"
