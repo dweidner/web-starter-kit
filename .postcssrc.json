@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "postcss-custom-media": {},
+    "postcss-nesting": {},
+    "postcss-calc": {},
+    "postcss-inset": {},
+    "postcss-gap-properties": {},
+    "postcss-color-functional-notation": {},
+    "autoprefixer": {}
+  }
+}

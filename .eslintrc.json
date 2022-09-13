@@ -1,5 +1,4 @@
 {
-  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2020
@@ -19,16 +18,13 @@
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "linebreak-style": ["error", "unix"],
+    "comma-dangle": ["error", "always-multiline"],
     "no-unused-vars": ["error", {"ignoreRestSiblings": true}],
     "jsdoc/require-returns-description": ["off"]
   },
   "settings": {
     "jsdoc": {
       "mode": "typescript"
-    },
-    "polyfills": [
-      "Promise",
-      "fetch"
-    ]
+    }
   }
 }

@@ -1,9 +1,4 @@
-import {initialize as initializeImportPolyfill} from 'dynamic-import-polyfill';
 import {defineAsync} from 'wicked-elements';
-
-initializeImportPolyfill({
-  modulePath: '/scripts/',
-});
 
 document.documentElement.classList.replace('no-js', 'js');
 
