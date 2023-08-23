@@ -1,11 +1,5 @@
 /* Document */
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 body,
 h1,
 h2,
@@ -19,14 +13,6 @@ dd {
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-    min-block-size: 100vh;
-    line-height: var(--leading-normal);
-}
 
 /* Flow Content */
 
@@ -92,11 +78,6 @@ textarea {
     line-height: inherit;
 }
 
-option {
-    padding-block: var(--space-1);
-    padding-inline: var(--space-2);
-}
-
 textarea {
     resize: vertical;
 }
@@ -120,21 +101,4 @@ fieldset {
 legend {
     display: table;
     min-inline-size: 100%;
-}
-
-/* Animations */
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }

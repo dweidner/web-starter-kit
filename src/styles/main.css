@@ -12,12 +12,15 @@
 /* Generic
  * ----------------------------------------------------------------------- */
 
+@import url("generic/_generic.box-sizing.css");
+@import url("generic/_generic.reset.css");
 @import url("generic/_generic.fonts.css");
-@import url("generic/_generic.reboot.css");
+@import url("generic/_generic.animations.css");
 
 /* Elements
  * ----------------------------------------------------------------------- */
 
+@import url("elements/_elements.document.css");
 @import url("elements/_elements.headings.css");
 @import url("elements/_elements.links.css");
 
