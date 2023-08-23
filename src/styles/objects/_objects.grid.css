@@ -1,0 +1,7 @@
+/* {@link https://every-layout.dev/layouts/grid/ The Grid} */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--min-width, 16em), 100%), 1fr));
+  grid-gap: var(--grid-gutter, var(--space-md-lg));
+}

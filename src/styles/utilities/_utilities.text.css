@@ -1,0 +1,23 @@
+.text-base {
+  font-size: var(--size-0);
+}
+
+.text-md {
+  font-size: var(--size-1);
+}
+
+.text-lg {
+  font-size: var(--size-2);
+}
+
+.text-xl {
+  font-size: var(--size-3);
+}
+
+.text-2xl {
+  font-size: var(--size-4);
+}
+
+.text-3xl {
+  font-size: var(--size-5);
+}

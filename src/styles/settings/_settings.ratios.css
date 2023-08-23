@@ -1,0 +1,27 @@
+:root {
+  /* Common image ratios */
+
+  --ratio-square: 1 / 1;
+  --ratio-portrait: 2 / 3;
+  --ratio-landscape: 3 / 2;
+  --ratio-widescreen: 16 / 9;
+
+  /* Common harmonic ratios */
+
+  /* a) Low contrast */
+
+  --ratio-minor-second: 1.067;
+  --ratio-major-second: 1.125;
+
+  /* b) Medium contrast */
+
+  --ratio-minor-third: 1.2;
+  --ratio-major-third: 1.25;
+  --ratio-perfect-fourth: 1.333;
+
+  /* c) High contrast */
+
+  --ratio-augmented-fourth: 1.414;
+  --ratio-perfect-fifth: 1.5;
+  --ratio-golden: 1.618;
+}

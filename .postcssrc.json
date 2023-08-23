@@ -1,11 +1,15 @@
 {
   "plugins": {
-    "postcss-custom-media": {},
-    "postcss-nesting": {},
-    "postcss-calc": {},
-    "postcss-inset": {},
-    "postcss-gap-properties": {},
-    "postcss-color-functional-notation": {},
-    "autoprefixer": {}
+    "postcss-preset-env": {
+      "stage": 1,
+      "features": {
+        "blank-pseudo-class": false,
+        "focus-visible-pseudo-class": false,
+        "focus-within-pseudo-class": false,
+        "has-pseudo-class": false,
+        "image-set-function": false,
+        "prefers-color-scheme-query": false
+      }
+    }
   }
 }

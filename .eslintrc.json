@@ -10,8 +10,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:compat/recommended",
-    "plugin:import/recommended",
-    "plugin:jsdoc/recommended"
+    "plugin:import/recommended"
   ],
   "rules": {
     "indent": ["error", 2],
@@ -19,8 +18,7 @@
     "quotes": ["error", "single"],
     "linebreak-style": ["error", "unix"],
     "comma-dangle": ["error", "always-multiline"],
-    "no-unused-vars": ["error", {"ignoreRestSiblings": true}],
-    "jsdoc/require-returns-description": ["off"]
+    "no-unused-vars": ["error", {"ignoreRestSiblings": true}]
   },
   "settings": {
     "jsdoc": {

@@ -1,0 +1,6 @@
+a {
+  color: currentcolor;
+  text-decoration: none;
+  text-underline-offset: 0.15em;
+  text-decoration-skip-ink: auto;
+}

@@ -1,0 +1,22 @@
+/* {@link https://every-layout.dev/layouts/sidebar/ The Sidebar} */
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--layout-gutter, var(--space-lg-xl));
+}
+
+.layout__content {
+  flex-basis: 0;
+  flex-grow: 1e5;
+  min-inline-size: var(--layout-content-width, 50%);
+}
+
+.layout__sidebar {
+  flex-basis: var(--layout-sidebar-width, 20em);
+  flex-grow: 1;
+}
+
+.layout--reverse {
+  flex-direction: row-reverse;
+}

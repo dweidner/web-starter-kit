@@ -1,9 +1,8 @@
 /**
- * Returns the reference of the first element that matches the given CSS
- * selector.
+ * Find the first element that matches the given CSS selector.
  *
- * @param {string} selector The CSS selector.
- * @param {Element} context The element to start searching from.
+ * @param {string} selector
+ * @param {Element} context
  * @returns {?Element}
  */
 export function $(selector, context = document) {
@@ -11,10 +10,10 @@ export function $(selector, context = document) {
 }
 
 /**
- * Returns the reference of all elements that matches the given CSS selector.
+ * Find all elements that matches the given CSS selector.
  *
- * @param {string} selector The CSS selector.
- * @param {Element} context The element to start searching from.
+ * @param {string} selector
+ * @param {Element} context
  * @returns {Element[]}
  */
 export function $$(selector, context = document) {

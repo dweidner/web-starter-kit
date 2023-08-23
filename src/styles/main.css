@@ -1,58 +1,54 @@
-/**
- * TABLE OF CONTENTS
- *
- * Settings ---------------- Global variables
- *   Breakpoints ........... Media queries
- *   Typography ............ Type scale
- *   Colors ................ Color palette
- *   Layout ................ Spacing and sizing scale
- *   Animation ............. Consistency accross motions
- *   Elevation ............. Illusion of depth
- *   Layers ................ Consistent layering
- *   Misc .................. Miscellaneous settings
- *
- * Generic ----------------- Ground-zero styles
- *   Fonts ................. Custom web fonts
- *   Reboot ................ Opinionated reset of browser styles
- *
- * Objects ----------------- Cosmetic-free design patterns
- *   Container ............. Limit an elements width.
- *   Stack ................. Add spacing between siblings.
- *   Icon .................. Properly align pictograms with surroundig text.
- *
- * Components -------------- Styled UI components
- *   Header ................ Header of a website.
- *   Footer ................ Information repeated at the end of each page.
- *
- * Scopes ------------------ Styled UI sections
- *   Rich Text ............. Sane typographic defaults for text sections.
- *
- * Vendors ----------------- 3rd party styles
- *   Google Maps .......... Split and animate (text) elements.
- *
- * Utilities --------------- Helpers and overwrites
- *   Accessibility ......... Utilities for screen-readers.
- *   Animation ............. Animate elements.
- *   Color ................. Customize the text color of elements.
- *   Text .................. Utilities to change the appearance of text.
- *   Spacing ............... Increase the vertical spacing between elements.
- *   Misc .................. Miscellaneous utilities.
- */
-
 /* Settings
  * ----------------------------------------------------------------------- */
 
-@import "settings/_settings.breakpoints.css";
-@import "settings/_settings.typography.css";
-@import "settings/_settings.colors.css";
-@import "settings/_settings.layout.css";
-@import "settings/_settings.animation.css";
-@import "settings/_settings.elevation.css";
-@import "settings/_settings.layers.css";
-@import "settings/_settings.misc.css";
+@import url("settings/_settings.breakpoints.css");
+@import url("settings/_settings.ratios.css");
+@import url("settings/_settings.typography.css");
+@import url("settings/_settings.spacing.css");
+@import url("settings/_settings.colors.css");
+@import url("settings/_settings.transitions.css");
+@import url("settings/_settings.easings.css");
 
 /* Generic
  * ----------------------------------------------------------------------- */
 
-@import "generic/_generic.fonts.css";
-@import "generic/_generic.reboot.css";
+@import url("generic/_generic.fonts.css");
+@import url("generic/_generic.reboot.css");
+
+/* Elements
+ * ----------------------------------------------------------------------- */
+
+@import url("elements/_elements.headings.css");
+@import url("elements/_elements.links.css");
+
+/* Objects
+ * ----------------------------------------------------------------------- */
+
+@import url("objects/_objects.container.css");
+@import url("objects/_objects.region.css");
+@import url("objects/_objects.layout.css");
+@import url("objects/_objects.grid.css");
+@import url("objects/_objects.stack.css");
+@import url("objects/_objects.cluster.css");
+@import url("objects/_objects.icon.css");
+
+/* Components
+ * ----------------------------------------------------------------------- */
+
+/* @import url("components/_components.button.css"); */
+
+/* Scopes
+ * ----------------------------------------------------------------------- */
+
+/* @import url("scopes/_scopes.rich-text.css"); */
+
+/* Vendors
+ * ----------------------------------------------------------------------- */
+
+/* @import url("vendors/_vendors.photoswipe.css"); */
+
+/* Utilities
+ * ----------------------------------------------------------------------- */
+
+@import url("utilities/_utilities.accessibility.css");
+@import url("utilities/_utilities.text.css");
