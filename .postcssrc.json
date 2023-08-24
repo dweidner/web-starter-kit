@@ -2,7 +2,7 @@
   "plugins": {
     "postcss-jit-props": {
       "files": [
-        "./site/assets/css/settings/*.css"
+        "./src/styles/settings/*.css"
       ]
     },
     "postcss-preset-env": {
