@@ -1,14 +1,3 @@
-/* Settings
- * ----------------------------------------------------------------------- */
-
-@import url("settings/_settings.breakpoints.css");
-@import url("settings/_settings.ratios.css");
-@import url("settings/_settings.typography.css");
-@import url("settings/_settings.spacing.css");
-@import url("settings/_settings.colors.css");
-@import url("settings/_settings.transitions.css");
-@import url("settings/_settings.easings.css");
-
 /* Generic
  * ----------------------------------------------------------------------- */
 

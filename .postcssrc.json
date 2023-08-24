@@ -1,5 +1,10 @@
 {
   "plugins": {
+    "postcss-jit-props": {
+      "files": [
+        "./site/assets/css/settings/*.css"
+      ]
+    },
     "postcss-preset-env": {
       "stage": 1,
       "features": {
