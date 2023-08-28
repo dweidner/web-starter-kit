@@ -33,7 +33,7 @@
     "lint:styles": "stylelint 'src/styles/**/*.css'"
   },
   "devDependencies": {
-    "eslint": "^8.47.0",
+    "eslint": "^8.48.0",
     "eslint-plugin-compat": "^4.1.4",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jsdoc": "^46.5.0",
