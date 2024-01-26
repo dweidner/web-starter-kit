@@ -7,8 +7,7 @@
 
   display: flex;
   block-size: auto;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto hidden;
   scrollbar-color: var(--slider-track-color) var(--slider-thumb-color);
 }
 
