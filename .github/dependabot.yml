@@ -24,3 +24,11 @@ updates:
       stylelint:
         patterns:
           - "stylelint*"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "chore:"
+    labels:
+      - "type: maintanance"
