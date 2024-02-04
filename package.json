@@ -42,7 +42,7 @@
     "postcss": "^8.4.33",
     "postcss-jit-props": "^1.0.14",
     "postcss-preset-env": "^9.3.0",
-    "stylelint": "^16.2.0",
+    "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-selector-bem-pattern": "^3.0.1",
     "vite": "^5.0.12"
