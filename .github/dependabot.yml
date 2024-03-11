@@ -24,6 +24,14 @@ updates:
       stylelint:
         patterns:
           - "stylelint*"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "chore:"
+    labels:
+      - "type: maintanance"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

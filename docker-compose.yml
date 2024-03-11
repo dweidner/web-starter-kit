@@ -1,0 +1,26 @@
+name: "web-starter-kit"
+
+services:
+  node:
+    build:
+      context: "."
+      target: "development"
+      args:
+        - "UID=${UID:-1000}"
+        - "GID=${GID:-1000}"
+    restart: "unless-stopped"
+    tty: true
+    init: true
+    env_file:
+      - path: ".env"
+        required: false
+    volumes:
+      - ".:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    ports:
+      - "${FORWARD_VITE_PORT:-5173}:5173"
+    healthcheck:
+      test: "wget --no-verbose --spider --tries=1 node:5173 || exit 1"
+      interval: "30s"
+      timeout: "30s"
+      retries: 3
