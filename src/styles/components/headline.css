@@ -1,0 +1,10 @@
+.headline {
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  color: var(--color-text-primary);
+}
+
+.subheadline {
+  font-weight: var(--weight-normal);
+  line-height: var(--leading-snug);
+}

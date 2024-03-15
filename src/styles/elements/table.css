@@ -1,0 +1,11 @@
+table {
+  inline-size: 100%;
+  border-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+    vertical-align: top;
+    text-align: start;
+}

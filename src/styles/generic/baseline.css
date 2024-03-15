@@ -1,0 +1,158 @@
+/* Document */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+dl,
+dd,
+blockquote,
+figure,
+figcaption {
+    margin: 0;
+}
+
+html {
+  color-scheme: light;
+  accent-color: var(--color-accent);
+
+  &:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  min-block-size: 100vb;
+  font-family: var(--font-sans);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+  background-color: var(--color-background);
+}
+
+
+/* Grouping Content */
+
+hr {
+  overflow: visible;
+  block-size: 0;
+  border-width: 1px 0 0;
+  border-style: solid;
+  color: inherit;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+
+/* Flow Content */
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+ol[class],
+ul[class] {
+    list-style: none;
+}
+
+
+/* Interactive Content */
+
+a {
+  &:not([class]) {
+    text-decoration-thickness: max(1px, 0.075em);
+    text-underline-offset: 0.15em;
+    text-decoration-skip-ink: auto;
+  }
+}
+
+:focus-visible {
+  --outline-size: max(2px, 0.125em);
+
+  outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid) var(--outline-color, currentcolor);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+:focus {
+  scroll-margin-block-end: var(--scroll-margin-end, 5vh);
+}
+
+:target {
+  scroll-margin-block-start: var(--scroll-margin-start, 5vh);
+}
+
+
+/* Embedded Content */
+
+img,
+svg,
+picture,
+canvas,
+audio,
+video {
+  display: block;
+  max-inline-size: 100%;
+}
+
+img,
+svg,
+canvas,
+video {
+  block-size: auto;
+}
+
+picture {
+  display: contents;
+}
+
+source {
+  display: none;
+}
+
+audio {
+    inline-size: 100%;
+
+    &:not([controls]) {
+        display: none;
+    }
+}
+
+
+/* Form-associated Content */
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* Motion Preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-delay: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+}

@@ -1,0 +1,7 @@
+/* {@link https://every-layout.dev/layouts/center/ The Center} */
+
+.container {
+  max-inline-size: var(--container-size, 64rem);
+  padding-inline: var(--container-margin, 1rem);
+  margin-inline: auto;
+}

@@ -1,0 +1,59 @@
+/* {@link https://every-layout.dev/layouts/icon/ The Icon} */
+
+.icon {
+  flex-shrink: 0;
+  display: inline-block;
+  inline-size: 1em;
+  block-size: 1em;
+  font-size: var(--icon-size, 1em);
+  line-height: var(--leading-none);
+  color: inherit;
+  stroke: none;
+  fill: currentcolor;
+}
+
+.icon--filled {
+  stroke: none;
+  fill: currentcolor;
+}
+
+.icon--outlined {
+  fill: none;
+  stroke: currentcolor;
+}
+
+.icon--3xs {
+  --icon-size: 0.5em;
+}
+
+.icon--2xs {
+  --icon-size: 0.75em;
+}
+
+.icon--xs {
+  --icon-size: 1em;
+}
+
+.icon--sm {
+  --icon-size: 1.25em;
+}
+
+.icon--md {
+  --icon-size: 1.5em;
+}
+
+.icon--lg {
+  --icon-size: 2em;
+}
+
+.icon--xl {
+  --icon-size: 3em;
+}
+
+.icon--2xl {
+  --icon-size: 4em;
+}
+
+.icon--3xl {
+  --icon-size: 6em;
+}

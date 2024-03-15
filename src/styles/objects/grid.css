@@ -1,0 +1,15 @@
+/* {@link https://every-layout.dev/layouts/grid/ The Grid} */
+
+.grid {
+  --grid-column-size: 16rem;
+  --grid-column-limit: 3;
+  --grid-column-gap: 1.5rem;
+  --grid-row-gap: 1.5rem;
+
+  display: grid;
+  gap: var(--grid-row-gap) var(--grid-column-gap);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(max(var(--grid-column-size), 100% / (var(--grid-column-limit) + 1)), 100%), 1fr)
+  );
+}

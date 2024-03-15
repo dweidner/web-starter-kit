@@ -1,0 +1,56 @@
+.gap-3xs,
+.gap-2xs,
+.gap-xs,
+.gap-sm,
+.gap-md,
+.gap-lg,
+.gap-xl,
+.gap-2xl,
+.gap-3xl {
+  gap: var(--row-gap) var(--column-gap);
+}
+
+.gap-3xs {
+  --row-gap: var(--space-3xs);
+  --column-gap: var(--space-3xs);
+}
+
+.gap-2xs {
+  --row-gap: var(--space-2xs);
+  --column-gap: var(--space-2xs);
+}
+
+.gap-xs {
+  --row-gap: var(--space-xs);
+  --column-gap: var(--space-xs);
+}
+
+.gap-sm {
+  --row-gap: var(--space-sm);
+  --column-gap: var(--space-sm);
+}
+
+.gap-md {
+  --row-gap: var(--space-md);
+  --column-gap: var(--space-md);
+}
+
+.gap-lg {
+  --row-gap: var(--space-lg);
+  --column-gap: var(--space-lg);
+}
+
+.gap-xl {
+  --row-gap: var(--space-xl);
+  --column-gap: var(--space-xl);
+}
+
+.gap-2xl {
+  --row-gap: var(--space-2xl);
+  --column-gap: var(--space-2xl);
+}
+
+.gap-3xl {
+  --row-gap: var(--space-3xl);
+  --column-gap: var(--space-3xl);
+}

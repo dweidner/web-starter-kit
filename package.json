@@ -30,9 +30,13 @@
     "build": "vite build --emptyOutDir",
     "lint": "run-s lint:*",
     "lint:scripts": "eslint .",
-    "lint:styles": "stylelint 'src/styles/**/*.css'"
+    "lint:styles": "stylelint 'src/styles/**/*.css'",
+    "format": "run-s format:*",
+    "format:scripts": "eslint --fix .",
+    "format:styles": "stylelint --fix 'src/styles/**/*.css'"
   },
   "dependencies": {
+    "open-props": "^1.6.21",
     "postcss": "^8.4.35",
     "postcss-jit-props": "^1.0.14",
     "postcss-preset-env": "^9.5.0",

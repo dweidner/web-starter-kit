@@ -3,7 +3,7 @@
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--cluster-gutter, var(--space-md));
+  gap: var(--cluster-gap, 1.5rem);
   justify-content: var(--cluster-horizontal-alignment, flex-start);
   align-items: var(--cluster-vertical-alignment, center);
 }

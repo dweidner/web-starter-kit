@@ -1,0 +1,28 @@
+/* {@link https://www.stubbornella.org/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ The media object saves hundreds of lines of code} */
+
+.media {
+  display: flex;
+  flex-direction: row;
+  align-items: var(--media-vertical-alignment, flex-start);
+  gap: var(--media-gap, 1.5rem);
+}
+
+.media__body {
+  flex: 1;
+}
+
+.o-media--start {
+  --media-vertical-alignment: flex-start;
+}
+
+.o-media--center {
+  --media-vertical-alignment: center;
+}
+
+.o-media--end {
+  --media-vertical-alignment: flex-end;
+}
+
+.media--reversed {
+  flex-direction: row-reverse;
+}

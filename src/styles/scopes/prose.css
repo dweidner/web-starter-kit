@@ -1,0 +1,10 @@
+.prose {
+  --heading-line-height: var(--leading-snug);
+  --body-line-height: var(--leading-normal);
+
+  line-height: var(--body-line-height);
+
+  & > * + * {
+    margin-top: var(--space, var(--space-md));
+  }
+}

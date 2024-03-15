@@ -1,0 +1,27 @@
+/* {@link https://prismjs.com/ Dead simple syntax highlighter} */
+
+pre,
+code {
+  font-family: var(--font-mono);
+}
+
+code {
+  padding: var(--space-3xs);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-highlight);
+}
+
+pre {
+  position: relative;
+  overflow: hidden;
+  tab-size: 2;
+  hyphens: none;
+  word-break: normal;
+  line-height: var(--leading-relaxed);
+}
+
+pre > code {
+  padding: 0;
+  border-radius: var(--radius-none);
+  background-color: transparent;
+}

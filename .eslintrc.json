@@ -28,6 +28,9 @@
     "jsdoc/require-returns-description": "off"
   },
   "settings": {
+    "import/resolver": {
+      "node": true
+    },
     "jsdoc": {
       "mode": "typescript"
     }
