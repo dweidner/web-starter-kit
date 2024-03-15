@@ -1,17 +1,8 @@
 import postcssJitProps from 'postcss-jit-props';
 import postcssPresetEnv from 'postcss-preset-env';
 
-import {
-  Indigo,
-  Gray,
-  Blue,
-  Yellow,
-  Green,
-} from 'open-props/src/props.colors.js';
-
-import {
-  StaticShadows,
-} from 'open-props/src/props.shadows.js';
+import Colors from 'open-props/src/props.colors.js';
+import Shadows from 'open-props/src/props.shadows.js';
 
 export default {
   plugins: [
@@ -19,12 +10,8 @@ export default {
       files: [
         './src/styles/tokens/*.css',
       ],
-      ...Indigo,
-      ...Gray,
-      ...Blue,
-      ...Yellow,
-      ...Green,
-      ...StaticShadows,
+      ...Colors,
+      ...Shadows,
     }),
     postcssPresetEnv({
       stage: 2,
