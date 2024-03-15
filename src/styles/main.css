@@ -29,9 +29,8 @@
 
 /* Utilities ------------------------------------------------------------ */
 
-@import url("utilities/aspect-ratio.css");
-@import url("utilities/size.css");
-@import url("utilities/gap.css");
-@import url("utilities/radius.css");
-@import url("utilities/region.css");
+@import url("utilities/aspect-ratios.css");
+@import url("utilities/sizes.css");
+@import url("utilities/gaps.css");
+@import url("utilities/radii.css");
 @import url("utilities/visually-hidden.css");
