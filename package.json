@@ -37,9 +37,9 @@
   },
   "dependencies": {
     "open-props": "^1.7.4",
-    "postcss": "^8.4.35",
+    "postcss": "^8.4.39",
     "postcss-jit-props": "^1.0.14",
-    "postcss-preset-env": "^9.5.14",
+    "postcss-preset-env": "^9.5.15",
     "vite": "^5.2.12"
   },
   "devDependencies": {
