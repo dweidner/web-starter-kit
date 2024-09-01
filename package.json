@@ -36,7 +36,7 @@
     "format:styles": "stylelint --fix 'src/styles/**/*.css'"
   },
   "dependencies": {
-    "open-props": "^1.7.4",
+    "open-props": "^1.7.6",
     "postcss": "^8.4.35",
     "postcss-jit-props": "^1.0.14",
     "postcss-preset-env": "^9.5.14",
