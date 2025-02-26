@@ -1,0 +1,24 @@
+:root {
+  --theme-color-text-default: ;
+  --theme-color-text-subtle: ;
+  --theme-color-text-brand: ;
+  --theme-color-text-brand-hover: ;
+  --theme-color-text-inverse: ;
+  --theme-color-text-utility-info: ;
+  --theme-color-text-utility-success: ;
+  --theme-color-text-utility-error: ;
+  --theme-color-border-strong: ;
+  --theme-color-border-subtle: ;
+  --theme-color-border-active: ;
+  --theme-color-background-default: ;
+  --theme-color-background-default-hover: ;
+  --theme-color-background-subtle: ;
+  --theme-color-background-subtle-hover: ;
+  --theme-color-background-brand: ;
+  --theme-color-background-brand-hover: ;
+  --theme-color-background-brand-disabled: ;
+  --theme-color-background-inverse: ;
+  --theme-color-background-utility-info: ;
+  --theme-color-background-utility-success: ;
+  --theme-color-background-utility-error: ;
+}
