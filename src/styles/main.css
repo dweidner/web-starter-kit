@@ -1,3 +1,9 @@
+/* Tokens --------------------------------------------------------------- */
+
+@import url("tokens/base/colors.css");
+@import url("tokens/theme/colors.css");
+@import url("tokens/component/colors.css");
+
 /* Generic -------------------------------------------------------------- */
 
 @import url("generic/fonts.css");
